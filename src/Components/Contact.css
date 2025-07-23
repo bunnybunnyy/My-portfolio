@@ -1,0 +1,142 @@
+.contact-section {
+  padding: 3rem 1rem;
+  background: rgb(33, 33, 55);
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 3rem auto;
+  box-shadow: 0 2px 12px rgba(222, 216, 216, 0.04);
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.contact-info {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+  font-size: 1.05rem;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.9rem 1rem;
+  border: 1.5px solid #ddd;
+  border-radius: 7px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: none;
+  background: #f7f7f7;
+  transition: border 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.contact-form button {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 0.9rem 1rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.5rem;
+  width: 130px;
+  height: 40px;
+  color: black;
+  background-color: white;
+  margin: 0 auto;
+  display: block;
+}
+
+.contact-form button:hover {
+  background: #007bff;
+}
+
+.contact-success {
+  margin-top: 1rem;
+  color: #28a745;
+  text-align: center;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .contact-section {
+    padding: 2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .contact-section h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-section {
+    padding: 1.2rem 0.2rem;
+    max-width: 99vw;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.98rem;
+    padding: 0.7rem 0.7rem;
+  }
+  .contact-form button {
+    font-size: 1rem;
+    padding: 0.7rem 0.7rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-section {
+    padding: 1.5rem 0.7rem;
+    width: auto;
+    height: 100vw;
+    justify-content: center;
+    margin-left: 10px;
+    
+  }
+  .contact-section h2 {
+    font-size: 1.05rem;
+  }
+  .contact-info {
+    font-size: 0.95rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.92rem;
+    padding: 0.5rem 0.5rem;
+  }
+  .contact-form button {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.5rem;
+    width: 130px;
+    height: 40px;
+    color: black;
+    background-color: white;
+       
+  }
+} 

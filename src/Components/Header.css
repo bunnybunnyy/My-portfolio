@@ -1,0 +1,237 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: transparent;
+  position: relative;
+  z-index: 10;
+}
+
+.brand {
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+  color: orange;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+  padding: 0;
+  margin-left: 8px;
+  transition: background 0.2s;
+}
+.menu-toggle:focus {
+  outline: 2px solid #007bff;
+}
+.menu-toggle .bar {
+  height: 2px;
+  width: 22px;
+  background: #fff;
+  margin: 3px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.menu-toggle.open .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin-right: 50px;
+  padding-right: 0;
+  transition: right 0.3s;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.nav-links li a:hover {
+  color: orange;
+}
+
+.nav-links li a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: orange;
+  transition: 0.2s;
+  bottom: -2px;
+}
+
+.nav-links li a:hover:after {
+  width: 100%;
+}
+
+.cv-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 16px;
+}
+
+.cv {
+  background-color: #eead2b;
+  width: 90px;
+  height: 40px;
+  border-radius: 8px;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-size: 1.1rem;
+}
+.cv:hover {
+  background-color: #ffbe3b;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+.cv a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.click-me-arrow {
+  display: flex;
+  height: 10px;
+  width: 80px;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  margin-right: 100px;
+  transform: translateX(60%) rotate(0deg);
+  z-index: 2;
+}
+.arrow {
+  font-size: 2rem;
+  color: #eead2b;
+  margin-bottom: -8px;
+  margin-left: 40px;
+  animation: arrow-bounce 1.2s infinite alternate;
+}
+@keyframes arrow-bounce {
+  0% { transform: translateY(0) rotate(20deg); }
+  100% { transform: translateY(-10px) rotate(20deg); }
+}
+.click-me-text {
+  color: #eead2b;
+  font-family: 'Poppins', cursive, sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 500;
+  margin-top: -2px;
+  letter-spacing: 1px;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .header {
+    padding: 15px 10px;
+  }
+  .brand {
+    font-size: 1rem;
+  }
+  .nav-links {
+    gap: 1rem;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  .menu-toggle {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+  .nav-links {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: 80vw;
+    height: 100vh;
+    background: #232336;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.08);
+    padding-top: 80px;
+    align-items: flex-start;
+    gap: 2rem;
+    z-index: 15;
+    transition: right 0.3s cubic-bezier(.4,2,.6,1);
+    margin-right: 0;
+  }
+  .nav-links.open {
+    right: 0;
+  }
+  .cv-container {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav-links{
+    width: 90px;
+  }
+  .header {
+    padding: 10px 2vw;
+  }
+  .brand {
+    font-size: 0.9rem;
+  }
+  .cv {
+    width: 80px;
+    height: 36px;
+    font-size: 1rem;
+    margin-top: -25px;
+    
+  }
+  .arrow {
+    font-size: 2rem;
+    font-weight: bold;
+
+    margin-left: 29px;
+    margin-top: -25px;
+    
+  }
+  .click-me-text{
+    font-size: large;
+    font-weight: bold;
+    font-family: poppins;
+  }
+}
