@@ -14,7 +14,7 @@ const ProjectGallery = ({ images, isReact }) => {
           data-aos="fade-up"
           data-aos-delay={idx * 120}
         >
-          <img src={img.src} alt={img.title} />
+          <img src={img.src}  alt={img.title} loading="lazy" />
           <div className="project-title">{img.title}</div>
         </div>
       ))}

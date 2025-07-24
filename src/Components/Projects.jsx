@@ -16,7 +16,7 @@ const projectData = {
     { src: 'Cover.png', title: 'Reading Book App' },
   ],
   graphic: [
-    { src: 'burger (1).png', title: 'Velves Brand Logo' },
+    { src: 'burger (1).webp', title: 'Velves Brand Logo' },
     { src: 'burger (2).png', title: 'RDX post' },
     { src: 'burger (3).png', title:'Packaging Design' },
     { src: 'burger (4).png', title: 'Shoes Post' },
