@@ -36,7 +36,7 @@ const About = () => {
       <div className="aboutme-main">
         <div className="aboutme-img">
           <div className="aboutme-blob"></div>
-          <img src="/me.png" alt="Profile" />
+          <img src="/me.webp" alt="Profile" />
         </div>
         <div className="aboutme-info">
           <div className="aboutme-cards">

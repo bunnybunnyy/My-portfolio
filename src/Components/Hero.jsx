@@ -11,7 +11,7 @@ function Hero() {
     <div className='hero-section' data-aos="fade-up">
       <div className='hero-avatar'>
         <div className='blob'></div>
-        <img src='/me2.png' alt='3D Avatar' className='avatar-img' />
+        <img src='/me2.webp' alt='3D Avatar' className='avatar-img' />
       </div>
       <div className='hero-content'>
         <h2 className='hero-intro'>HI, I AM MUHAMMAD UMAR</h2>
